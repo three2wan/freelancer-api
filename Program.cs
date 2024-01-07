@@ -43,6 +43,12 @@ app.MapGet("/weatherforecast", () =>
 .WithName("GetWeatherForecast")
 .WithOpenApi();
 
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+
+var context = services.GetRequiredService<DataContext>();
+await DataSeed.Seed(context);
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
