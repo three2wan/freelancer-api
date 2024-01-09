@@ -13,7 +13,7 @@ public class FreelancerController : ControllerBase
         _context = context;
     }
 
-    [HttpGet]
+    [HttpGet("GetHelloWorld")]
     public string GetHelloWorld()
     {
         return "Hello World!!";
