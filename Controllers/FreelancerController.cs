@@ -14,9 +14,18 @@ public class FreelancerController : ControllerBase
     }
 
     [HttpGet]
+    public string GetHelloWorld()
+    {
+        return "Hello World!!";
+    }
+
+
+    [HttpGet]
     public async Task<ActionResult<List<Freelancer>>> GetAllFreelancers()
     {
-        return await _context.Freelancers.ToListAsync();
+        var fr = await _context.Freelancers.ToListAsync();
+
+        return Ok(fr);
     }
 
     [HttpGet("{id}")]
