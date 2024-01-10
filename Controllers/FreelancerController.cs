@@ -38,7 +38,7 @@ public class FreelancerController : ControllerBase
             return NotFound();
         }
 
-        return fr;
+        return Ok(fr);
     }
 
     [HttpPut("{id}")]
@@ -59,7 +59,9 @@ public class FreelancerController : ControllerBase
 
         await _context.SaveChangesAsync();
 
-        return Ok();
+        DateTime currDateTime = DateTime.Now;
+        var dateTime = currDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+        return Ok(new { Message = "Successful update data", DateTime = dateTime });
     }
 
     [HttpPost]
@@ -68,7 +70,9 @@ public class FreelancerController : ControllerBase
         _context.Freelancers.Add(freelancer);
         await _context.SaveChangesAsync();
 
-        return Ok();
+        DateTime currDateTime = DateTime.Now;
+        var dateTime = currDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+        return Ok(new { Message = "Successful added to database", DateTime = dateTime });
     }
 
     [HttpDelete("{id}")]
@@ -83,7 +87,9 @@ public class FreelancerController : ControllerBase
         _context.Freelancers.Remove(fr);
         await _context.SaveChangesAsync();
 
-        return Ok();
+        DateTime currDateTime = DateTime.Now;
+        var dateTime = currDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+        return Ok(new { Message = "Successful delete the data", DateTime = dateTime });
     }
 
 }
