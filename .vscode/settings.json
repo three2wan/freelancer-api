@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/6ae710bc-3894-4059-8039-abd26ba02023/resourceGroups/syazwan-demo_group/providers/Microsoft.Web/sites/syazwan-demo",
+    "appService.deploySubpath": "publish"
+}
