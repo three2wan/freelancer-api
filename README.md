@@ -2,7 +2,6 @@
 
 This repository hosts an API for building a comprehensive list of freelancers, showcasing their unique skills, hobbies, and contact information. Whether you're looking to connect with talented individuals or you're a freelancer eager to showcase your expertise, this API provides a simple and efficient solution.
 
-</br>
 ## Get All Freelancers
 
 Retrieve a list of all freelancers available in the system. Freelancers are individuals who offer their details, skills and hobbies. This endpoint provides a comprehensive overview of their profiles.
@@ -42,7 +41,6 @@ Response:
 ]
 ```
 
-</br>
 ## Get Freelancer by ID
 
 Retrieve detailed information about a specific freelancer based on their unique identifier (ID). This endpoint is useful when you need detailed insights into a particular freelancer's profile.
@@ -64,7 +62,6 @@ Response:
 }
 ```
 
-</br>
 ## Create New Freelancer
 
 Add a new freelancer to the system. This endpoint is essential for onboarding new talent and expanding the pool of available freelancers within your platform.
@@ -100,7 +97,6 @@ Response:
 }
 ```
 
-</br>
 ## Update Freelancer Details
 
 Modify and update the information associated with a specific freelancer. This functionality is crucial for keeping freelancer profiles accurate and up-to-date.
@@ -136,7 +132,6 @@ Response:
 }
 ```
 
-</br>
 ## Delete Freelancer by ID
 
 Remove a specific freelancer from the system, permanently deleting their profile and associated data. Use this endpoint with caution, as it irreversibly removes the freelancer's information.
